@@ -9,6 +9,7 @@
 #import "Object+Unrealm.h"
 @import RealmSwift;
 @import Realm;
+@import Realm.Swift;
 
 @implementation RealmSwiftObject (Unrealm)
 
