@@ -11,18 +11,18 @@ let package = Package(
         .library(name: "Unrealm", targets: ["Unrealm", "UnrealmObjC"])
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-cocoa.git", from: "10.15.1"),
+        .package(url: "https://github.com/realm/realm-swift.git", from: "10.39.0"),
         .package(url: "https://github.com/wickwirew/Runtime.git", from: "2.2.2")
     ],
     targets: [
         .target(
             name: "UnrealmObjC",
-            dependencies: ["Realm", "RealmSwift"],
+            dependencies: ["RealmSwift"],
             path: "Unrealm/Classes/ObjC"
         ),
         .target(
             name: "Unrealm",
-            dependencies: ["UnrealmObjC", "Realm", "RealmSwift", "Runtime"],
+            dependencies: ["UnrealmObjC", "RealmSwift", "Runtime"],
             path: "Unrealm/Classes/Swift"
         )
     ],
